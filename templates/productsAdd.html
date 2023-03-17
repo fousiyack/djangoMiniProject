@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{%block content%}
+<div class="container-fluid">
+<form method='POST'action="">
+    {%csrf_token%}
+    <label for="productName">Product Name</label><br>
+    {{form.name}}<br>
+    <label for="price"></label>Price<br>
+    {{form.price}}<br>
+    <label for="stock">Stock</label><br>
+    {{form.stock}}<br>
+    <label for="image"></label>Price<br>
+    {{form.image}}<br>
+    <br> 
+{% comment %}    
+        {{ form.as_p }} {% endcomment %}
+   
+    
+    <input type="submit"value="Create"style="width-auto">
+</form>
+
+</div>
+{%endblock%}
